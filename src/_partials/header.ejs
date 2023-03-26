@@ -1,0 +1,88 @@
+<header class="c-header">
+  <div class="c-header--main l-container--w1920">
+    <div class="c-header--exbox">
+      <a href="<%= BASE_URL %>index.html" class="c-header--l">
+        <div class="c-header__logo">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/header/logoSP.png">
+            <img src="/assets/img/header/logoPC.png" alt="wist">
+          </picture>
+        </div>
+        <span class="c-header--ltxt">総合建設<br class="u-tabsp"><span>コンサルタント</span></span>
+      </a>
+      <div class="c-header--barbox u-tabsp" id="navbarToggle">
+        <img src="/assets/img/header/bar.png" alt="bar">
+        <span class="c-header--bartxt">メニュー</span>
+      </div>
+      <div class="c-header--r u-pc">
+        <nav class="c-nav">
+          <ul class="c-nav--ul">
+            <% if (typeof linklists !='undefined' ) { %>
+              <% linklists.main && linklists.main.forEach(link=> { %>
+                <li class="c-nav--li  <%= link.class%>">
+                  <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%=
+                          link.title %></a>
+                  <% if (link.links) { %>
+                    <ul class="c-nav--drd">
+                      <% link.links.forEach(child_link=> { %>
+                        <li class="c-nav-drdItem">
+                          <a <% if (child_link.current) { %>class="is-active"<% } %> href="<%= child_link.url %>"><%=
+                                  child_link.title %></a>
+                          <i class="fa fa-angle-right"></i>
+                        </li>
+                        <% }) %>
+                    </ul>
+                    <% } %>
+                </li>
+                <% }) %>
+                  <% } %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+  </div>
+  <div class="c-header--navmenu u-tabsp">
+    <div class="c-header--navhead">
+      <p class="c-header--address">〒860-0833　熊本市中央区平成3丁目16番13 <br>号</p>
+      <p class="c-header--tel">tel.<a href="tel:0962855177">096-285-5177</a></p>
+      <p class="c-header--fax"> fax.096-285-5188</p>
+    </div>
+    <nav class="c-header--navbody" >
+      <ul class="c-nav--ul">
+        <% if (typeof navlists !='undefined' ) { %>
+          <% navlists.main && navlists.main.forEach(link=> { %>
+            <li class="c-nav--li  <%= link.class%>">
+              <%- link.span%>
+                <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%=
+                        link.title %>
+                </a>
+
+            </li>
+            <% }) %>
+              <% } %>
+      </ul>
+
+    </nav>
+    <% if(typeof navchild !="undefined" ){%>
+      <% navchild.forEach(child=>{%>
+        <nav class="c-header--navchild" id="<%= child.id %>">
+          <p class="c-nav--back">戻る</p>
+            <ul class="c-nav--ul">
+              <% if (typeof child.main !='undefined') { %>
+                <%  child.main.forEach(link=> { %>
+                  <li class="c-nav--li  <%= link.class%>">
+                    <%- link.span%>
+                      <a <% if (link.current || link.active) { %>class="is-active"<% } %> href="<%= link.url %>"><%= link.title %>
+                      </a>
+            
+                  </li>
+                  <% }) %>
+                    <% } %>
+            </ul>
+        </nav>
+        <% })%>
+          <% }%>
+
+  </div>
+</header>

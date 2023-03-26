@@ -1,0 +1,96 @@
+@include tab {
+    header.is-active {
+        bottom: 0;
+
+        right: 0;
+
+        background-color: $cl-white-main;
+        height: 100%;
+        overflow-y: auto;
+
+        .c-header--main {
+            @media screen  and(min-width:767px) and(max-width:1024px) {
+                padding: 8.5px 50px 8px;;
+            }
+            padding: 6.5px 17px 5px 20px;
+            border-bottom: 1px dotted rgb(204, 204, 204);
+
+            .c-header--barbox {
+                img {
+                    max-width: 19px;
+                }
+            }
+        }
+
+        .c-header--navmenu {
+            display: block;
+
+            .c-header--navhead {
+        
+                font-weight: 300;
+                padding: 21px 20px 15px 21px;
+                text-align: center;
+                border-bottom: 1px dotted rgb(204, 204, 204);
+            }
+
+            .c-header--address {
+                font-size: 1.4rem;
+
+                letter-spacing: 1.4px;
+                margin-bottom: 10px;
+            }
+
+            .c-header--tel {
+                font-family: $font-lora;
+                font-weight: 400;
+                font-size: 1.5rem;
+                letter-spacing: 1.7px;
+                margin-bottom: 4px;
+
+                a {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .c-header--fax {
+                font-family: $font-lora;
+                font-weight: 400;
+                font-size: 1.2rem;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .c-header--navbody {
+          
+            font-weight: 300;
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+        .c-nav--li {
+            padding: 16px 20.5px 13px;
+            letter-spacing: 1.6px;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px dotted rgb(204, 204, 204);
+            }
+
+            & > span {
+                margin-right: 2px;
+                display: inline-block;
+                font-weight: 600;
+                transform: translateY(-1px);
+                color: $cl-blue;
+            }
+        }
+
+        .c-nav--li.c-nav--spe {
+            color: $cl-white-main;
+          
+          
+            & > span {
+                color: $cl-white-main;
+            }
+        }
+    }
+}

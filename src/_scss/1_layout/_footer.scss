@@ -1,0 +1,264 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    position: relative;
+   
+    @include tab {
+    }
+
+    .c-footer--ldecor,
+    .c-footer--rdecor {
+        position: absolute;
+    }
+
+    .c-footer--exbox {
+    }
+
+    .c-footer--ldecor {
+        bottom: -17.9%;
+        max-width: 35%;
+        overflow: hidden;
+        @include tab {
+            max-width: 112px;
+            bottom: 42.7%;
+            transform: translateY(50%);
+        }
+    }
+
+    .c-footer--rdecor {
+        right: 0%;
+        bottom: -17.9%;
+        max-width: 35%;
+        @include tab {
+            max-width: 112px;
+            bottom: 42.6%;
+            transform: translateY(50%);
+        }
+    }
+
+    .c-footer--hastagbox {
+        text-align: center;
+        color: $cl-white-main;
+        position: absolute;
+        z-index: 3;
+        top: 85.6%;
+        left: 16.1%;
+        transform: translate(-10%, -75%);
+        text-shadow: 0 0 2px #40a62a, 0 0 2px #40a62a, 0 0 2px #40a62a;
+        @include tab {
+            position: unset;
+            color: $cl-green1;
+            transform: translate(0);
+            padding-right: 2px;
+            margin-bottom: 22px;
+            text-shadow: 0 0 1px #eee, 0 0 1px #eee, 0 0 1px #eee;
+        }
+
+        .c-footer--hastag {
+            font-size: 5rem;
+            font-family: $font-lora;
+            font-weight: 400;
+            line-height: 0.9;
+            margin-bottom: 4px;
+            @include tab {
+                font-size: 3rem;
+                margin-bottom: 1px;
+            }
+
+            span {
+                margin-left: -1px;
+                font-size: 2rem;
+                @include tab {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .c-footer--desc {
+            font-size: 1.4rem;
+           
+            letter-spacing: 3.2px;
+            transform: translate(2px, 2px);
+            font-weight: 300;
+            white-space: nowrap;
+            font-feature-settings: "palt";
+            @include tab {
+                font-size: 1.2rem;
+                white-space: normal;
+                letter-spacing: 2.4px;
+                transform: translate(1px, 0);
+            }
+        }
+    }
+
+    .c-footer--middle {
+        padding-top: 60px;
+        max-width: 600px;
+        margin: 0 auto;
+        @include tab {
+            padding-top: 37px;
+            z-index: 2;
+            position: relative;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+        }
+
+        & > picture > img {
+            transform: translateX(-1px);
+            @include tab {
+                max-width: 92px;
+                transform: translateX(-0.5px);
+            }
+        }
+    }
+
+    .c-footer--comp {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        line-height: 1.725;
+        letter-spacing: 1px;
+
+        @include tab {
+            margin-top: 11px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            padding-left: 0;
+        }
+
+        span {
+            display: inline-block;
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            transform: translateY(-2px);
+            @include tab {
+                font-size: 1.2rem;
+                letter-spacing: 0.4px;
+           
+            }
+        }
+    }
+
+    .c-footer--adress {
+        margin-top: 2px;
+        font-size: 1.3rem;
+        font-weight: 300;
+
+        letter-spacing: 1.2px;
+        @include tab {
+            margin-top: 3px;
+            font-size: 1.2rem;
+            letter-spacing: 1.2px;
+        }
+    }
+
+    .c-footer--tel {
+        margin-top: 15px;
+        font-family: $ymc-db;
+
+        font-size: 3.2rem;
+        transform: translateX(-3px);
+        @include tab {
+            font-size: 1.8rem;
+            margin-top: 11px;
+            transform: translateX(-1.5px);
+        }
+
+        span {
+            font-size: 2.6rem;
+            font-family: $ymc-r;
+            font-weight: 400;
+            margin-right: -7px;
+            @include tab {
+                font-size: 1.6rem;
+                margin-right: -4px;
+            }
+        }
+    }
+
+    .c-footer--fax {
+        margin-top: 2px;
+        font-size: 1.6rem;
+        font-family: $ymc-r;
+        font-weight: 400;
+        letter-spacing: 1.63px;
+        @include tab {
+            font-size: 1.2rem;
+            letter-spacing: 1.2px;
+            margin-top: 3px;
+        }
+    }
+
+    .c-footer--access {
+        margin-top: 8px;
+        margin-bottom: 31px;
+        padding: 0 114px;
+        display: flex;
+        font-family: $kozgopro;
+        font-weight: 400;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        
+        @include tab {
+            padding: 0;
+            font-size: 1.1rem;
+            max-width: 235px;
+            margin: 10px auto 19px;
+        }
+
+        span {
+            font-weight: 600;
+            color: $cl-blue;
+         
+            font-size: 2rem;
+            @include tab {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .c-footer-accessl {
+        letter-spacing: 0.65px;
+        @include tab {
+            letter-spacing: 0.5px;
+        }
+
+        span {
+            display: inline-block;
+            transform: translate(-2px, 2px);
+            @include tab {
+                transform: translate(-1px, 0);
+            }
+        }
+    }
+
+    .c-footer-accessr {
+        letter-spacing: 0.5px;
+       
+        @include tab {
+            letter-spacing: 0.45px;
+        }
+
+        span {
+            display: inline-block;
+            transform: translate(1px, 2px);
+            @include tab {
+                transform: translate(1px, 0.5px);
+            }
+        }
+    }
+
+    .c-footer-copyright {
+        font-weight: 300;
+
+        font-size: 1.2rem;
+        letter-spacing: 1.19px;
+        @include tab {
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
+    }
+}

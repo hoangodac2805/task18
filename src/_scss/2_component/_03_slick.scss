@@ -1,0 +1,35 @@
+.slick-dots {
+    position: absolute;
+    top: 50%;
+    right: 0.6%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    
+}
+
+
+.slick-dots li {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #000;
+
+    &:not(:last-of-type) {
+        margin-bottom: 28px;
+    }
+}
+
+.slick-dots li button::before {
+    content: none;
+}
+
+
+
+
+.slick-dots li.slick-active {
+  
+    background-color: $cl-blue !important;
+}

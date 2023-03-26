@@ -1,0 +1,33 @@
+.c-title {
+    font-size: 2.4rem;
+    line-height: 1.85;
+    letter-spacing: 2px;
+    margin-top: -1px;
+    font-feature-settings: "palt";
+    @include tab {
+        font-size: 1.8rem;
+        line-height: 1.433;
+        margin-top: 5px;
+
+    }
+
+    span {
+        font-size: 1.4rem;
+        font-weight: 300;
+
+        line-height: 2;
+        display: inline-block;
+        letter-spacing: 1.4px;
+        @include tab {
+            line-height: 1.73;
+        
+        }
+    }
+
+    .c-title--spfirst {
+        margin-top: 12px;
+        @include tab {
+            margin-top: 14px;
+        }
+    }
+}

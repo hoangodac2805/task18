@@ -1,0 +1,8 @@
+.c-eleheader {
+    @include tab {
+        & > picture {
+            img {max-width: 35px;}
+            
+        }
+    }
+}

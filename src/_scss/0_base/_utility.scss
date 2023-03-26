@@ -1,0 +1,61 @@
+.u-bgblue {
+    background-color: $cl-blue;
+}
+
+.u-bggreen {
+    background-color: $cl-green1;
+}
+
+.u-bgred {
+    background-color: $cl-red1;
+}
+
+.u-bgyellow {
+    background-color: $cl-yellow1;
+}
+
+.u-bggray {
+    background-color: #a1a1a1;
+}
+
+.u-clyellow {
+    color: $cl-yellow2;
+}
+
+.u-ls2 {
+    letter-spacing: 2px;
+    @include sp {
+        letter-spacing: 1.4px;
+    }
+}
+
+.u-center {
+    text-align: center;
+}
+
+.u-tabsp {
+    display: none;
+    @include tab {
+        display: block;
+    }
+}
+
+.u-pc {
+    @include tab {
+        display: none;
+    }
+}
+
+.u-pc--show {
+    
+    @include tab {
+        display: none !important;
+    }
+}
+
+.u-pc--hide {
+    display: none !important;
+    @include tab {
+        display: block !important;
+    }
+}

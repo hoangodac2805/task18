@@ -1,0 +1,34 @@
+.c-ele--footer {
+  
+    display: inline-block !important;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    @include tab {
+        padding-top: 24px;
+        padding-bottom: 22px;
+    }
+
+    p {
+        display: block;
+
+        font-size: 1.8rem;
+       
+        
+        color: #000;
+        letter-spacing: 1.5px;
+        z-index: 2;
+        position: relative;
+        @include tab {
+            font-size: 1.4rem;
+            line-height: 1.285;
+        }
+
+        span {
+            display: inline-block;
+         
+        }
+    }
+  
+}

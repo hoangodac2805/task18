@@ -1,0 +1,141 @@
+/* Header
+------------------------------------------------------------*/
+.c-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: $cl-white-main;
+
+    .c-header--main {
+        padding-left: 20px;
+        @include tab {
+            padding: 8.5px 50px 8px;
+        }
+        @include sp {
+            padding: 8.5px 20px 8px;
+        }
+    }
+
+    .c-header--exbox {
+        max-width: 1560px;
+        white-space: nowrap;
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        transition: all 0.3s;
+        @include tab {
+            height: unset;
+        }
+    }
+
+    .c-header--l {
+        padding: 16px 0 18px;
+        display: flex;
+        align-items: center;
+        @include tab {
+            justify-content: unset;
+            padding: unset;
+        }
+    }
+
+    .c-header__logo {
+        margin-right: 14px;
+        @include tab {
+            max-width: 94.5px;
+            margin-right: 9.5px;
+        }
+    }
+
+    .c-header--ltxt {
+        transform: translateY(1px);
+        font-size: 1.8rem;
+        letter-spacing: 0.6px;
+
+        span {
+            letter-spacing: -1.2px;
+        }
+        @include tab {
+            font-size: 0.9rem;
+            color: #6a6a6a;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+            transform: translateY(0);
+
+            span {
+                letter-spacing: -0.6px;
+            }
+        }
+    }
+
+    .c-nav--li {
+        transition: all 0.2s;
+
+        &:hover {
+            background-image: url(/assets/img/header/logo-mark.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            @include tab {
+                background-image: none;
+            }
+        }
+    }
+
+    .c-header--r {
+        height: 100%;
+    }
+    @include tab {
+        .c-header--barbox {
+            cursor: pointer;
+            max-width: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translate(-3px, 1px);
+            transition: all 0.3s;
+
+            .c-header--bartxt {
+                font-size: 0.9rem;
+                white-space: nowrap;
+                display: inline-block;
+            }
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .c-header--navmenu {
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .c-header.is-fixed {
+        background-color: rgb(255, 255, 255, 0.8);
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+
+        .c-header__logo {
+            margin-right: 20px;
+            width: 120px;
+        }
+
+        .c-header--exbox {
+            height: 60px;
+        }
+
+        .c-header--l {
+            padding: 15px 0 16px;
+        }
+
+        .c-header--ltxt {
+            transform: translateY(0);
+            letter-spacing: 1.1px;
+            font-size: 1.2rem;
+        }
+    }
+}

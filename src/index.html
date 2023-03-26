@@ -1,0 +1,358 @@
+<%- include('_layouts/layout', { title: 'Wist' }); -%>
+
+  <!-- @meta -->
+  <meta name="description" content="Home page">
+  <!-- @@meta -->
+
+  <!-- @content -->
+  <main>
+    <section class="c-mainvisual">
+      <div class="c-mainvisual--exbox">
+        <div class="c-mainvisual--item c-mainvisual--item1">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/mainvisual/img1SP.jpg">
+            <img src="/assets/img/mainvisual/img1.jpg" alt="Wist">
+          </picture>
+
+          <div class="c-mainvisual--midcontent">
+            <div class="c-mainvisual--midexbox">
+              <picture>
+                <source media="(max-width:1024px )" srcset="/assets/img/text1SP.png">
+                <img src="/assets/img/mainvisual/logo.png" alt="protect the future">
+              </picture>
+              <div class="c-hastag">
+                <h1 id="text-typing" class="c-hastagtxt">Protect
+                  <span class="c-hastagtxtsmall">the</span>future
+
+                </h1>
+                <span class="c-hastagtxt2">防災技術を駆使し、地域の未来を守る。</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="c-mainvisual--item  c-mainvisual--item2">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/mainvisual/img2SP.jpg">
+            <img src="/assets/img/mainvisual/img2.jpg" alt="Wist">
+          </picture>
+
+          <div class="c-mainvisual--midcontent">
+            <h2 class="c-mainvisual--title">Protect
+              <br>
+              <span class="c-mainvisual--desc">
+                生命と財産を守る
+              </span>
+            </h2>
+
+          </div>
+        </div>
+        <div class="c-mainvisual--item  c-mainvisual--item3">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/mainvisual/img3SP.jpg">
+            <img src="/assets/img/mainvisual/img3.jpg" alt="Wist">
+          </picture>
+          <div class="c-mainvisual--midcontent">
+
+            <div class="c-mainvisual--midcontent">
+              <h2 class="c-mainvisual--title">Connect
+                <br>
+                <span class="c-mainvisual--desc">
+                  地域と人を繋ぐ
+                </span>
+              </h2>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="c-mainvisual--item  c-mainvisual--item4">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/mainvisual/img4SP.jpg">
+            <img src="/assets/img/mainvisual/img4.jpg" alt="Wist">
+          </picture>
+          <div class="c-mainvisual--midcontent">
+
+            <div class="c-mainvisual--midcontent">
+              <h2 class="c-mainvisual--title">Technology
+                <br>
+                <span class="c-mainvisual--desc">
+                  最新技術を生かす
+                </span>
+              </h2>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <a href="#itd" class="c-mainvisual--rounded">
+        <span class="c-mainvisual--point"></span>
+      </a>
+      <div class="c-mainvisual--notifi">
+        <div class="c-mainvisual--notifiexbox">
+          <div class="c-mainvisual--notifiL">
+            <span class="c-mainvisual--arrow c-mainvisual--arrowL"><span>></span> </span>
+            <span class="c-mainvisual--arrow c-mainvisual--arrowR"><span>></span> </span>
+
+          </div>
+          <div class="c-mainvisual--notifiMid">
+
+            <p class="c-mainvisual--notifiMidtxt"><span>2018年11月22日</span><br
+                class="u-tabsp">先進建設・防災・減災技術フェアin熊本にドローン等について出展しました。</p>
+            <p class="c-mainvisual--notifiMidtxt"><span>2018年11月22日</span><br
+                class="u-tabsp">先進建設・防災・減災技術フェアin熊本にドローン等について出展しました。
+            </p>
+          </div>
+          <div class="c-mainvisual--notifiR u-pc">
+            <a class="c-mainvisual--notifiRtxt" href="#">お知らせ一覧 <span>></span></a>
+          </div>
+        </div>
+        <div class="c-mainvisual--viewmore u-tabsp">
+          <a class="c-mainvisual--viewmoretxt" href="#">お知らせ一覧 <span>></span></a>
+        </div>
+      </div>
+    </section>
+    <section class="c-itd" id="itd">
+      <div class="c-itd--exbox l-container">
+        <div class="c-itd--header c-eleheader">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/itd/iconSP.png">
+            <img src="/assets/img/itd/icon.png" alt="Wist">
+          </picture>
+
+          <h2 class="c-title">
+            事業紹介
+            <br>
+            <span class="c-title--spfirst">アイエステーは、たゆまない技術向上により、地域防災事業に携わるとともに <br class="u-pc--show">
+              地域の安全・安心を確保できるインフラ整備に貢献します。</span>
+          </h2>
+        </div>
+        <div class="c-itd--main c-scrollBox">
+          <div class="c-flexbox c-flexbox--4row ">
+            <% if(typeof itd !='undefined' ){ %>
+              <% itd.main.forEach(item=>{%>
+                <div class="c-flexbox--item  <%- item.style %>">
+                  <picture>
+                    <source media="(max-width: 1024px)" srcset="<%= item.spimg %>">
+                    <img src="<%= item.pcimg %>" alt="<%= item.txt %>">
+                  </picture>
+                  <a href="#" class="c-anm--img">
+                    <img src="<%= item.anmimg %>" alt="<%= item.txt %>">
+                  </a>
+                  <div class="c-flexbox--infobox">
+                    <div class="c-flexbox--info <%- item.bgcl %>">
+                      <div class="c-flexbox--infoicon">
+                        <picture>
+                          <source media="(max-width:1024px )" srcset="<%= item.spicon %>">
+                          <img class="c-flexbox--infoicon" src="<%= item.icon %>" alt="<%= item.txt %>">
+                        </picture>
+                      </div>
+
+                      <span class="c-flexbox--infotxt">
+                        <%= item.txt %>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+                <% })%>
+                  <% }%>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="c-product">
+      <div class="c-product--exbox c-scrollBox">
+        <div class="c-product--main l-container">
+          <div class="c-product--l">
+            <picture>
+              <source media="(max-width:767px )" srcset="/assets/img/product/uavSP.png">
+              <img src="/assets/img/product/uav.png" alt="レーザースキャナ搭載のドローン">
+            </picture>
+          </div>
+          <div class="c-product--r">
+            <h2 class="c-product__title">レーザースキャナ搭載のドローン<span class="u-clyellow">*</span><br class="u-pc--show">
+              <span >で安全かつ効率的に測量が可能。</span>
+            </h2>
+            <h3 class="c-product__cap">
+              アイエステーでは、ドローン搭載型の測量用レーザースキャナ搭載のドローンを導入しました。これにより、従来の写真測量で必須だった対空標識を置くことなく、安全かつ効率的に測量することが可能となりました。またレーザーは植生下にも届くため、写真測量では不可能だった植生下のグランドデータを取得できます。災害時の地形測量や施工管理における活躍が期待できます。
+            </h3>
+            <p class="c-product__desc"><span class="u-clyellow">＊</span>アミューズワンセルフ社製：ドローン搭載用レーザースキャナシステム「TDOT（ティードット）」
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="c-ele--footer">
+        <p class="c-product__view">詳細情報 <span>></span></p>
+      </a>
+    </section>
+    <section class="c-plan">
+      <div class="c-plan--bg">
+        <div class="c-plan--exbox l-container ">
+          <div class="c-plan--header u-center c-eleheader">
+            <picture>
+              <source media="(max-width:1024px )" srcset="/assets/img/itd/iconSP.png">
+              <img src="/assets/img/itd/icon.png" alt="Wist">
+            </picture>
+
+            <h2 class="c-title">
+              実績紹介
+              <br>
+              <span class="c-title--spfirst">『地域の人たちが安全に安心して暮らせるように、<br>そして豊かに快適に暮らせるように』、そんな想いを込めて仕事をしています。</span>
+            </h2>
+          </div>
+          <div class="c-plan--main">
+            <div class="c-flexbox c-flexbox--4row u-pc--show">
+              <% if(typeof plan !="undefined" ){%>
+                <% plan.main.forEach(item=>{%>
+                  <div class="c-flexbox--item <%- item.style %>">
+                    <a href="#">
+                      <div class="c-plan--cardhead">
+                        <img src="<%- item.img %>" alt="<%- item.cate %>">
+                        <span class="c-plan--cate <%- item.catebg %>"><%- item.cate %></span>
+                      </div>
+                      <div class="c-plan--cardbot">
+                        <h3 class="c-plan--cardtitle"><%- item.title %></h3>
+                        <span class="c-plan--cardarrow">></span>
+                      </div>
+                    </a>
+                  </div>
+                  <% })%>
+                    <% }%>
+
+
+            </div>
+            <div class="u-pc--hide c-plan--prev c-plan--btn"><i class="fa fa-angle-left"></i></div>
+            <div class="c-plan--slick u-pc--hide">
+              <% if(typeof plan !="undefined" ){%>
+                <% plan.main.forEach(item=>{%>
+                  <div class="c-plan--card">
+                    <a href="#">
+                      <div class="c-plan--cardhead">
+                        <picture>
+                          <source media="(max-width:1024px )" srcset="<%- item.imgSP %>">
+                          <img src="<%- item.img %>" alt="<%- item.cate %>">
+                        </picture>
+
+                        <span class="c-plan--cate <%- item.catebg %>"><%- item.cate %></span>
+                      </div>
+                      <div class="c-plan--cardbot">
+                        <h3 class="c-plan--cardtitle"><%- item.title %></h3>
+                        <span class="c-plan--cardarrow">></span>
+                      </div>
+                    </a>
+                  </div>
+                  <% })%>
+                    <% }%>
+
+
+            </div>
+
+            <div class="u-pc--hide c-plan--next c-plan--btn"><i class="fa fa-angle-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="c-ele--footer">
+        <p class="c-product__view">実績紹介一覧 <span>></span></p>
+      </a>
+
+    </section>
+    <section class="c-banner">
+      <div class="c-banner--exbox">
+        <div class="c-banner--main">
+          <a href="#" class="c-banner--item c-banner--L">
+            <div class="c-banner--content">
+              <h2 class="c-banner__title">会社案内
+                <br>
+                <span>これまでの防災技術と新分野のICTなどを拡充し、<br class="u-pc">地元地域に密着した総合建設コンサルタントを目指します。<br> <span class="c-banner--arrow">></span></span>
+              </h2>
+            </div>
+          </a>
+          <a href="#" class="c-banner--item c-banner--R">
+
+            <div class="c-banner--content">
+              <h2 class="c-banner__title">採用情報
+                <br>
+                <span>私たちと共に専門知識や技術を高めながら<br class="u-pc">
+                  地域の未来を守る人材を募集しています。<br> <span class="c-banner--arrow">></span></span>
+              </h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-notifi">
+      <div class="c-notifi--exbox">
+        <div class="c-notifi--header u-center c-eleheader">
+          <picture>
+            <source media="(max-width:1024px )" srcset="/assets/img/itd/iconSP.png">
+            <img src="/assets/img/itd/icon.png" alt="Wist">
+          </picture>
+          <h2 class="c-title">
+            お知らせ
+
+          </h2>
+        </div>
+        <div class="c-notifi--main">
+          <ul>
+
+            <li>
+              <a href="#">
+                <p class="c-notifi--date">2018年11月22日</p>
+                <p class="c-notifi--event">先進建設・防災・減災技術フェアin熊本にドローン等について出展しました。</p>
+                <p class="c-notifi--arrow"><span>></span></p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p class="c-notifi--date">2018年11月20日</p>
+                <p class="c-notifi--event">ホームページをリニューアルしました</p>
+                <p class="c-notifi--arrow"><span>></span></p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p class="c-notifi--date">2018年07月04日</p>
+                <p class="c-notifi--event">綿田地区の復興を願って寄付をしました。</p>
+                <p class="c-notifi--arrow"><span>></span></p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <p class="c-notifi--date">2017年10月12日</p>
+                <p class="c-notifi--event">福岡支店が移転しました。</p>
+                <p class="c-notifi--arrow"><span>></span></p>
+              </a>
+
+            </li>
+            <li>
+              <a href="#">
+                <p class="c-notifi--date">2017年09月01日</p>
+                <p class="c-notifi--event">ドローンレーザスキャナを導入しました</p>
+                <p class="c-notifi--arrow"><span>></span></p>
+              </a>
+
+            </li>
+
+          </ul>
+        </div>
+        <a href="#" class="c-ele--footer">
+          <p class="c-product__view">お知らせ一覧 <span>></span></p>
+        </a>
+      </div>
+    </section>
+  </main>
+  <!-- @@content -->
+
+  <!-- @script -->
+  <script>
+
+  </script>
+  <!-- @@script -->

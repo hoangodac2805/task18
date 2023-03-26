@@ -1,0 +1,272 @@
+{
+  "linklists": {
+    "main": [
+      {
+        "title": "会社案内 ",
+        "url": "#",
+        "class": ""
+      },
+      {
+        "title": "事業紹介",
+        "url": "#",
+        "class": "",
+        "links": [
+          {
+            "title": "防災・減災業務",
+            "url": "#"
+          },
+          {
+            "title": "ICT・BIM/CIM",
+            "url": "#"
+          },
+          {
+            "title": "測量・設計業務",
+            "url": "#"
+          },
+          {
+            "title": "調査業務",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "実績紹介 ",
+        "url": "#",
+        "class": ""
+      },
+      {
+        "title": "技術資料 ",
+        "url": "#",
+        "class": ""
+      },
+      {
+        "title": "採用情報",
+        "url": "#",
+        "class": "u-bggreen c-nav--spe",
+        "links": [
+          {
+            "title": "私たちの仕事",
+            "url": "#"
+          },
+          {
+            "title": "先輩社員の声",
+            "url": "#"
+          },
+          {
+            "title": "募集要項",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "お問い合わせ",
+        "url": "/contact.html",
+        "class": "u-bgblue c-nav--spe"
+      }
+    ]
+  },
+  "navlists": {
+    "main": [
+      {
+        "title": "お知らせ ",
+        "url": "#",
+        "class": "c-nav--onoff",
+        "span": " <span >></span>"
+        
+      },
+      {
+        "title": " 会社案内 ",
+        "url": "#",
+        "class": "c-nav--onoff",
+        "span": " <span >></span>"
+      },
+      {
+        "title": "事業紹介",
+        "url": "#",
+        "class": "c-nav--plus c-nav--par1",
+        "":"",
+        "span": " <span >+</span>"
+      },
+      {
+        "title": "実績紹介 ",
+        "url": "#",
+        "class": "c-nav--onoff",
+        "span": " <span >></span>"
+      },
+      {
+        "title": "技術資料 ",
+        "url": "#",
+        "class": "c-nav--onoff",
+        "span": " <span >></span>"
+      },
+      {
+        "title": "交通アクセス ",
+        "url": "#",
+        "class": "c-nav--onoff",
+        "span": " <span >></span>"
+      },
+      {
+        "title": "プライバシーポリシー ",
+        "url": "#",
+        "class": "c-nav--onoff",
+        "span": " <span >></span>"
+      },
+      {
+        "title": "採用情報",
+        "url": "#",
+        "class": "u-bggreen c-nav--spe c-nav--plus  c-nav--par2",
+        "span": " <span >+</span>"
+      },
+      {
+        "title": "お問い合わせ",
+        "url": "/contact.html",
+        "class": "c-nav--onoff u-bgblue c-nav--spe",
+        "span": " <span >></span>"
+      }
+    ]
+  },
+  "navchild": [
+    {
+      "id": "c-navchild1",
+      "main": [
+        {
+          "title": "私たちの仕事 ",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        },
+        {
+          "title": "先輩社員の声",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        },
+        {
+          "title": "募集要項 ",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        }
+      ]
+    },
+    {
+      "id": "c-navchild2",
+      "main": [
+        {
+          "title": "事業紹介（インデックス)",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        },
+        {
+          "title": "防災・減災業務",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        },
+        {
+          "title": "ICT・BIM/CIM ",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        },
+        {
+          "title": "測量・設計業務",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        },
+        {
+          "title": "調査業務",
+          "url": "#",
+          "class": "c-nav--onoff",
+          "span": " <span >></span>"
+        }
+      ]
+    }
+  ],
+  "itd": {
+    "main": [
+      {
+        "pcimg": "/assets/img/itd/item1.jpg",
+        "spimg": "/assets/img/itd/item1SP.jpg",
+        "spicon": "/assets/img/itd/tsunamiSP.png",
+        "anmimg":"/assets/img/itd/anmitem1.png",
+        "bgcl": "u-bgred",
+        "txt": "防災・減災業務",
+        "icon": "/assets/img/itd/tsunami.png",
+        "style": "c-flexbox--item1"
+       
+      },
+      {
+        "pcimg": "/assets/img/itd/item2.jpg",
+        "bgcl": "u-bgblue",
+        "txt": "ICT・BIM/CIM",
+        "icon": "/assets/img/itd/drone.png",
+        "anmimg": "/assets/img/itd/anmitem2.png",
+        "style": "c-kakurev c-flexbox--item2",
+        "spimg": "/assets/img/itd/item2SP.jpg",
+        "spicon": "/assets/img/itd/droneSP.png"
+        
+      },
+      {
+        "pcimg": "/assets/img/itd/item3.jpg",
+        "bgcl": "u-bgyellow",
+        "txt": "測量・設計業務",
+        "icon": "/assets/img/itd/camera.png",
+        "anmimg": "/assets/img/itd/anmitem3.png",
+        "style": "c-flexbox--item3",
+        "spimg": "/assets/img/itd/item3SP.jpg",
+        "spicon": "/assets/img/itd/cameraSP.png"
+      
+      },
+      {
+        "pcimg": "/assets/img/itd/item4.jpg",
+        "bgcl": "u-bggreen",
+        "txt": "調査業務",
+        "icon": "/assets/img/itd/drill.png",
+        "anmimg": "/assets/img/itd/anmitem4.png",
+        "style": "c-kakurev c-flexbox--item4",
+        "spimg": "/assets/img/itd/item4SP.jpg",
+        "spicon": "/assets/img/itd/drillSP.png"
+
+      }
+    ]
+  },
+  "plan": {
+    "main": [
+      {
+        "img": "/assets/img/plan/img1.jpg",
+        "imgSP": "/assets/img/plan/img1SP.jpg",
+        "cate": "ICT・BIM/CIM",
+        "catebg": "u-bgblue",
+        "title": "No title",
+        "style": ""
+      },
+      {
+        "img": "/assets/img/plan/img2.jpg",
+        "imgSP": "/assets/img/plan/img2.jpg",
+        "cate": "防災・減災業務",
+        "catebg": "u-bgred",
+        "title": "十籠地すべり対策事業",
+        "style": "c-mt"
+      },
+      {
+        "img": "/assets/img/plan/img3.jpg",
+        "imgSP": "/assets/img/plan/img3.jpg",
+        "cate": "防災・減災業務",
+        "catebg": "u-bgred",
+        "title": "水ヶ浦地区災害関連緊急地すべり対策事業",
+        "style": ""
+      },
+      {
+        "img": "/assets/img/plan/img4.jpg",
+        "imgSP": "/assets/img/plan/img4.jpg",
+        "cate": "防災・減災業務",
+        "catebg": "u-bgred",
+        "title": "大切畑地区災害関連緊急地すべり対策事業",
+        "style": "c-mt"
+      }
+    ]
+  }
+}

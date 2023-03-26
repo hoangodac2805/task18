@@ -1,0 +1,127 @@
+.c-banner {
+    font-feature-settings: "palt";
+    background-color: $cl-gray1;
+    padding-top: 51px;
+    @include sp {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .c-banner--main {
+        display: flex;
+        width: 100%;
+        @include tab {
+            flex-wrap: wrap;
+        }
+    }
+
+    .c-banner--item {
+        width: 50%;
+        flex-grow: 1;
+        padding: 5% 7.9% 4.41% 10.05%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include tab {
+        
+        }
+        @include sp {
+            width: 100%;
+            padding: 7.48% 6.1% 5.45% 5.35%;
+        }
+        
+    }
+
+    .c-banner--L {
+        width: calc(50% - 2px);
+        margin-right: 2px;
+        background-image: url(/assets/img/banner/banner1.jpg);
+        @include sp {
+            margin-right: 0;
+            margin-bottom: 5px;
+            background-image: url(/assets/img/banner/banner1SP.jpg);
+
+            .c-banner__title {
+                span:not(.c-banner--arrow) {
+                
+                    letter-spacing: 0.4px;
+                    @include sp {
+                        letter-spacing: 1.2px;
+                    }
+                }
+            }
+       
+        }
+    }
+
+    .c-banner--R {
+        padding: 5% 7.9% 4.41% 10.15%;
+        background-image: url(/assets/img/banner/banner2.jpg);
+        @include sp {
+            padding: 7.08% 7.3% 5.8% 5.3%;
+            background-image: url(/assets/img/banner/banner2SP.jpg);
+
+            .c-banner--content {
+                .c-banner__title {
+                    line-height: 1.325;
+                   
+                }
+
+                span:not(.c-banner--arrow) {
+                    padding-left: 1px;
+                    letter-spacing: 2.9px;
+                    margin-top: 12px;
+                    @include sp {
+                        line-height: 1.5;
+                        font-size: 1.4rem;
+                        padding-left: 0;
+                        letter-spacing: 1.4px;
+                    }
+                }
+
+                .c-banner--arrow {
+                    transform: translate(0, -2px);
+                }
+            }
+        }
+        
+    }
+
+  
+
+    .c-banner__title {
+        color: $cl-white-main;
+        font-size: 3rem;
+        line-height: 1.2;
+        letter-spacing: 3px;
+        @include sp {
+            font-size: 1.6rem;
+            line-height: 1.125;
+            letter-spacing: 1.7px;
+        }
+
+        span:not(.c-banner--arrow) {
+            display: inline-block;
+            margin-top: 13px;
+            font-size: 1.5rem;
+            line-height: 2;
+            letter-spacing: 1.5px;
+            @include sp {
+                font-size: 1.2rem;
+                line-height: 1.7;
+                letter-spacing: 0.75px;
+            }
+        }
+
+        .c-banner--arrow {
+            display: inline-block;
+            font-size: 1.8rem;
+            transform: translate(1px, -5px);
+            @include sp {
+                font-size: 1.5rem;
+                transform: translate(0, -3px);
+            }
+        }
+    }
+}

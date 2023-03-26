@@ -1,0 +1,191 @@
+.c-notifi {
+    padding-top: 50px;
+    font-feature-settings: "palt";
+    @include sp {
+        padding-top: 40px;
+    }
+
+    .c-title {
+        @include sp {
+            margin-top: 4px;
+        }
+    }
+
+    .c-notifi--main {
+        max-width: 600px;
+        margin: 0 auto 30px;
+        @include sp {
+            padding: 0 19px;
+            margin: 18px auto 20px;
+        }
+    }
+
+    ul {
+        width: 100%;
+
+        font-weight: 300;
+       
+        font-size: 1.4rem;
+        line-height: 2;
+
+        text-align: left;
+        margin-top: 1px;
+        @include sp {
+            font-size: 1.2rem;
+            line-height: 1.166;
+        }
+    }
+
+    li {
+        position: relative;
+        cursor: pointer;
+        border-bottom: 1px solid rgb(204, 204, 204);
+
+        &:hover {
+            background-color: #f5f5f5;
+        }
+    }
+
+    a {
+        display: flex;
+        @include sp {
+            flex-wrap: wrap;
+        }
+    }
+
+    li:first-of-type {
+        @include sp {
+            border-top: 1px solid rgb(204, 204, 204);
+        }
+
+        .c-notifi--date {
+            padding: 13px 9px;
+            letter-spacing: 1.2px;
+            @include sp {
+                padding: 14px 0.2px 8px;
+                letter-spacing: 1.2px;
+            }
+        }
+
+        .c-notifi--event {
+            padding: 14px 5px 12.5px;
+            letter-spacing: 1.4px;
+            @include sp {
+                letter-spacing: 1.2px;
+                padding: 1px 1px 9px;;
+            }
+        }
+
+        .c-notifi--arrow {
+            span {
+                top: 27%;
+            }
+        }
+    }
+
+    li:not(:first-of-type) {
+        .c-notifi--event {
+            padding: 13px 5px 3px;
+            letter-spacing: 1.4px;
+            @include sp {
+                padding: 7px 0 8.5px;
+                letter-spacing: 1.2px;
+
+                span {
+                    transform: translate(1px, -15.5px);
+                }
+            }
+        }
+
+        .c-notifi--date {
+            padding: 12.2px 9px;
+            letter-spacing: 1.2px;
+            @include sp {
+                padding: 13.7px 0 0;
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+    @include sp {
+        li:last-of-type {
+            .c-notifi--date {
+                padding-top: 14px;
+            }
+
+            .c-notifi--event {
+                padding-bottom: 9px;
+            }
+        }
+    }
+
+    .c-notifi--date {
+        width: 24.7%;
+        padding-left: 7px;
+        font-weight: 300;
+
+        color: $cl-blue;
+
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .c-notifi--event {
+        padding: 15.5px 4px 11.5px;
+        width: 66.66%;
+        @include sp {
+            padding: 1.5px 0 9.5px;
+
+            width: 90%;
+            margin-right: 7%;
+            line-height: 1.7;
+        }
+    }
+
+    .c-ele--footer {
+        background-color: $cl-gray2;
+        padding-top: 25px;
+        padding-bottom: 24px;
+
+        a {
+            letter-spacing: 1.2px;
+         
+        }
+        @include sp {
+            padding-top: 19px;
+            padding-bottom: 17px;
+        }
+
+        p {
+            color: $cl-black-main !important;
+        }
+    }
+
+}
+
+.c-notifi--arrow {
+    text-align: center;
+    flex-grow: 1;
+    color: $cl-blue;
+    @include sp {
+        width: 2%;
+    }
+
+    span {
+        display: inline-block;
+      
+        font-weight: 600;
+        font-size: 1.8rem;
+        position: absolute;
+        top: 13%;
+        right: 1.9%;
+        @include sp {
+            font-size: 1.5rem;
+            top: 48.9% !important;
+            right: -1% !important;
+            transform: translate(-50%, -50%);
+        }
+    }
+ 
+}
+

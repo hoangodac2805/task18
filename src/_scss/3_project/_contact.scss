@@ -1,0 +1,254 @@
+.p-contact {
+    margin-bottom: 100px;
+}
+
+.c-contact--banner {
+    position: relative;
+    margin-top: 80px;
+    @include tab {
+        margin-top: 45px;
+    }
+
+    .c-contact--bannerimg {
+        min-width: 100%;
+        min-height: 120px;
+        @include tab {
+            object-fit: cover;
+        }
+    }
+
+    .c-contact--bannertxt {
+        position: absolute;
+        font-size: 3rem;
+
+        line-height: 1;
+        color: $cl-white-main;
+        top: 71%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 2.8px;
+        @include tab {
+            font-size: 2rem;
+            top: 65%;
+        }
+    }
+}
+
+.c-contact-main {
+    padding-top: 50px;
+
+    .c-contact-exbox {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .c-title {
+        letter-spacing: 2.4px;
+    }
+
+    .c-title--spfirst {
+        margin-top: 8px;
+        text-align: left;
+        padding: 0 15px 0 13px;
+        letter-spacing: 1.4px;
+    }
+}
+
+.c-contact-form {
+    margin-top: 61px;
+    padding: 0 21px 0 15px;
+    text-align: center;
+    @include sp {
+        padding: 0 15px;
+    }
+
+    .c-contact--box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+        position: relative;
+        @include sp {
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+    }
+
+    .c-contact--error {
+        position: absolute;
+        bottom: -20px;
+        left: 30%;
+        color: red;
+        font-size: 1.4rem;
+        font-style: italic;
+
+        @include sp {
+            bottom: -30%;
+            left: 0%;
+            font-size: 1rem;
+        }
+    }
+
+    .c-contact--note {
+        display: inline-block;
+        color: $cl-white-main;
+        width: 42px;
+        height: 21px;
+        text-align: center;
+        border-radius: 3px;
+        line-height: 1.8;
+        font-weight: 300;
+
+        font-size: 1.2rem;
+        margin-right: 7px;
+       
+    }
+
+    .c-contact--label {
+        cursor: pointer;
+        font-feature-settings: "palt";
+        width: 20%;
+        padding-right: 15px;
+        margin-right: 0.4%;
+        line-height: 1.8;
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 300;
+        letter-spacing: 1.6px;
+        transform: translate(1px, 0);
+        @include sp {
+            width: 50%;
+        }
+    }
+
+    .c-contact--input {
+        width: calc(100% / 3 * 2);
+        flex-grow: 1;
+        height: 35px;
+        border: 1px solid #d3d3d3;
+        padding-left: 9px;
+        float: right;
+        @include sp {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        &:focus {
+            border-color: $cl-yellow1;
+        }
+
+        &::placeholder {
+            color: #ccc;
+            font-weight: 300;
+
+            font-size: 1.2rem;
+            letter-spacing: 1.7px;
+        }
+    }
+
+    .c-contact--postsign {
+        font-size: 1.4rem;
+        font-weight: 300;
+
+        display: inline-block;
+        margin-right: 11px;
+    }
+
+    .c-contact--adressarea {
+        display: flex;
+        align-items: center;
+        width: 72%;
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .c-contact--postnum {
+        width: 24.9%;
+        margin-right: 20px;
+        flex-grow: 0;
+        @include sp {
+            width: 110px;
+        }
+    }
+
+    .c-contact--select {
+        width: 32.6%;
+        flex-grow: 0;
+        appearance: none;
+        appearance: none;
+        appearance: none;
+   
+        background: url(/assets/img/contact/arrow.png) white no-repeat 98.5% !important;
+        background: url(/assets/img/contact/arrow.png) white no-repeat calc(100% - 10px) !important;
+        @include sp {
+            width: 140px;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+    .c-contact--homeadr {
+        width: 70.866667%;
+        flex-grow: 0;
+
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+        @include sp {
+            width: 100%;
+        }
+    }
+
+    .c-contact--homeadrbox {
+        margin-top: -24px;
+        flex-wrap: wrap;
+        justify-content: end;
+        @include sp {
+            justify-content: unset;
+            margin-top: -15px;
+        }
+    }
+
+    .c-contact--paragrahp {
+        align-items: unset;
+        margin-top: 41px;
+
+        .c-contact--input {
+            padding-top: 11px;
+            transform: translateY(-6px);
+            height: unset;
+        }
+
+        .c-contact--error {
+            bottom: -8%;
+        }
+
+        .c-contact--label {
+            line-height: 2;
+            transform: translate(1px, -3.1px);
+        }
+    }
+
+    .c-contact--btn {
+        width: 270px;
+        height: 40px;
+        border-radius: 0;
+        border: none;
+        background-color: $cl-blue;
+        margin-top: 19px;
+        transform: translateX(2px);
+        transition: all 0.3s;
+        color: $cl-white-main;
+        font-family: $main-fonts;
+        font-weight: 600;
+        font-size: 1.6rem;
+        letter-spacing: 1.2px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

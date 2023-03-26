@@ -1,0 +1,46 @@
+//baseWidth
+$base-width: 1920px;
+
+$main-fonts: "Hiragino Kaku Gothic ProN","游ゴシック", YuGothic, "ヒラギノ角ゴ Pro" , "メイリオ", "Meiryo", sans-serif;
+$kozgopro: kozgopro ;
+$font-lora: "Lora", serif;
+$fs-main: 1.6rem;
+
+
+$ymc-r: yuminchoregular;
+$ymc-l: yumincholight;
+$ymc-db: yuminchodemibold;
+//color common
+$cl-white-main: #fff;
+$cl-black-main: #333; 
+$cl-black1: #232b33;
+$cl-black2: #1c2533;
+$cl-blue: #48b7d0;
+$cl-gray1: #f5f5f5;
+$cl-gray2: #d3d3d3;
+$cl-red1: #d05e48;
+$cl-red2: #f00;
+$cl-orange1: #f59401;
+$cl-yellow1: #a68a2a;
+$cl-yellow2: #f90;
+$cl-green1: #40a62a;
+
+
+
+
+@font-face {
+    font-family: yuminchoregular;
+    src: url(/assets/font/yumin.ttf);
+}
+@font-face {
+    font-family: yuminchodemibold;
+    src: url(/assets/font/yumindb.ttf);
+}
+@font-face {
+    font-family: yumincholight;
+    src: url(/assets/font/yuminl.ttf);
+}
+@font-face {
+    font-family: kozgopro;
+    src: url(/assets/font/KozGoPro.otf);
+}

@@ -1,0 +1,171 @@
+.c-plan {
+    font-feature-settings: "palt";
+
+    .c-plan--bg {
+        background-image: url(/assets/img/plan/background.jpg);
+        padding-top: 49px;
+        padding-bottom: 45px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include tab {
+            padding-top: 39px;
+            background-size: 100% 100%;
+
+            background-image: url(/assets/img/plan/backgroundSP.jpg);
+        }
+    }
+
+    .c-plan--exbox {
+        padding: 0 15px;
+    }
+
+    .c-plan--main {
+        margin-top: 32px;
+        @include tab {
+            margin-top: 29px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+        }
+    }
+
+    .c-flexbox--item {
+        box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+        @include sp {
+            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .c-plan--cardhead {
+        position: relative;
+
+        img {
+            @include sp {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .c-plan--cate {
+        color: $cl-white-main;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 5px 8px 3px;
+        font-size: 1.2rem;
+        font-weight: 300;
+
+        letter-spacing: 1px;
+        @include sp {
+            padding: 4px 11px 2px;
+
+            line-height: 1.33;
+        }
+        
+    }
+
+    .c-plan--cardbot {
+        background-color: $cl-white-main;
+        width: 100%;
+        min-height: 95px;
+        padding: 11px 14px;
+        position: relative;
+        @include sp {
+            min-height: 79px;
+            padding: 7px 15px;
+        }
+    }
+
+    .c-plan--cardtitle {
+        
+          
+        font-size: 1.5rem;
+        line-height: 1.6;
+        letter-spacing: 1.4px;
+        @include tab {
+            font-size: 1.3rem;
+          
+        }
+    }
+
+    .c-plan--cardarrow {
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
+
+        font-size: 1.5rem;
+   
+        @include sp {
+            right: 16px;
+            bottom: 11px;
+        }
+    }
+
+    .c-mt {
+        transform: translateY(15px);
+    }
+    @media only screen and (max-width: 1024px) and (min-width: 767px) {
+        .slick-slide {
+            margin: 0 10px;
+        }
+
+        .slick-list {
+            margin: 0 -10px;
+        }
+    }
+    @include tab {
+        .c-plan--slick {
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .c-plan--btn {
+       
+       
+            color: $cl-blue;
+          
+            font-size: 4rem;
+            
+        }
+
+        .c-plan--prev {
+            transform: translate(-5px, -1px);
+        }
+
+        .c-plan--next {
+            transform: translate(5px, -1px);
+        }
+       
+    }
+    @include sp {
+        .c-plan--slick {
+            max-width: 225px;
+            margin: 0 auto;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+        }
+
+      
+    }
+
+    .c-ele--footer {
+     
+        letter-spacing: 1.8px;
+   
+
+        padding-top: 26px;
+        padding-bottom: 24px;
+        @include tab {
+            padding-top: 17px;
+            padding-bottom: 17px;
+
+            span {
+                transform: translateY(0);
+            }
+        }
+
+    }
+}

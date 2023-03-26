@@ -1,0 +1,33 @@
+/* layout
+------------------------------------------------------------*/
+body {
+    font-family: $main-fonts;
+    font-size: 1.6rem;
+    color: $cl-black-main;
+    line-height: 1.5;
+    font-weight: 600;
+    @include sp {
+        min-width: 320px;
+    }
+}
+//-------------------------------------------------------
+
+
+
+
+//-------------------------------------------------------
+.l-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.l-container--w1920 {
+    max-width: $base-width;
+    margin: 0 auto;
+}
+
+
+//-------------------------------------------------------
+.c-mainvisual {
+   
+}

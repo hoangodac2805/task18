@@ -1,0 +1,320 @@
+.c-itd {
+    font-feature-settings: "palt";
+    padding-top: 100px;
+    margin-top: -90px;
+    @include tab {
+        padding-top: 31px;
+        margin-top: 0;
+    }
+
+    .c-itd--header {
+        padding: 0 15px;
+    }
+
+    .c-itd--exbox {
+        text-align: center;
+        padding: 10px 15px 0;
+        @include tab {
+            padding: 10px 0 0;
+            max-width: 400px;
+        }
+    }
+
+    .c-itd--main {
+        margin-top: 32px;
+        @include tab {
+            margin-top: 18px;
+            padding: 0 20px;
+        }
+    }
+
+    .c-flexbox {
+        @include tab {
+            flex-wrap: wrap;
+        }
+
+        .c-flexbox--item {
+            overflow: hidden;
+            position: relative;
+            @include tab {
+                width: calc(50% - 20px);
+                margin-bottom: 20px;
+
+                &:not(:first-of-type) {
+                    margin-left: 0;
+                }
+
+                &:nth-of-type(2n) {
+                    margin-left: 20px;
+                }
+
+                &:nth-of-type(2) {
+                    .c-flexbox--info {
+                        .c-flexbox--infoicon {
+                            transform: scale(74%) translateY(2px);
+                        }
+
+                        .c-flexbox--infotxt {
+                  
+                            transform: translate(1px, 2px);
+                        }
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                border-bottom: 450px solid rgba(255, 255, 255, 0.7);
+                border-right: 270px solid transparent;
+                transition: all 0.5s;
+                z-index: 1;
+                @include tab {
+                    border-bottom: 389px solid rgba(255, 255, 255, 0.7);
+                    border-right: 271px solid transparent;
+                }
+            }
+
+            &::after {
+                content: "";
+                border-top: 212px solid rgba(255, 255, 255, 0.7);
+                border-left: 128px solid transparent;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transition: all 0.5s;
+                @include tab {
+                    border-top: 113px solid rgba(255, 255, 255, 0.7);
+                    border-left: 79px solid transparent;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 0 !important;
+                }
+
+                &::before {
+                    opacity: 0 !important;
+                }
+            }
+        }
+
+        .c-kakurev {
+            &::after {
+                content: "";
+                position: absolute;
+                border-bottom: 450px solid rgba(255, 255, 255, 0.7);
+                border-right: 0;
+                border-left: 270px solid transparent;
+                border-top: 0;
+                right: 0;
+                top: 0;
+                @include tab {
+                    border-bottom: 387px solid rgba(255, 255, 255, 0.7);
+                }
+            }
+
+            &::before {
+                content: "";
+                border-bottom: 0;
+                border-left: 0;
+                border-top: 212px solid rgba(255, 255, 255, 0.7);
+                border-right: 128px solid transparent;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: unset;
+                @include tab {
+                    border-top: 112px solid rgba(255, 255, 255, 0.7);
+                    border-right: 78px solid transparent;
+                }
+            }
+        }
+
+        .c-flexbox--infobox {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            content: "";
+            padding: 15px;
+            display: flex;
+            align-items: end;
+            z-index: 2;
+            @include tab {
+                justify-content: center;
+            }
+        }
+
+        .c-flexbox--info {
+            z-index: 2;
+            width: 100%;
+            min-height: 120px;
+
+            text-align: center;
+            padding: 21px 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include tab {
+                min-height: 44.1%;
+                padding: 0 0 13px;
+                height: 86px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                min-width: 120px;
+ 
+            }
+        }
+
+        .c-flexbox--infoicon {
+            @include tab {
+                transform: scale(70.7%) translateY(1px);
+            }
+        }
+
+        .c-flexbox--infotxt {
+            font-size: 1.8rem;
+          
+            letter-spacing: 3.8px;
+            color: $cl-white-main;
+            line-height: 0.8;
+            transform: translate(1px, -1px);
+            @include tab {
+                font-size: 1.4rem;
+                letter-spacing: 2.7px;
+              
+                line-height: 1;
+            }
+        }
+
+        .c-anm--img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 11;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+  
+   
+}
+
+@media screen and (min-width:1025px) {
+    .c-itd--main.is-active {
+        .c-anm--img {
+            opacity: 1;
+        }
+
+        .c-flexbox--item {
+            &:first-of-type,
+            &:nth-of-type(2) {
+                transform: translateX(60%);
+                animation-name: goleft;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-delay: 1s;
+            }
+
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                transform: translateX(-60%);
+                animation-name: goright;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-delay: 1s;
+            }
+        }
+
+        .c-flexbox--item {
+      
+        }
+
+        .c-flexbox--item > picture > img {
+            opacity: 0;
+        }
+
+        .c-flexbox--infobox {
+            opacity: 0;
+        }
+        @each $stt, $time in (1, 0.5s), (2, 1s), (3, 1.5s), (4, 2s) {
+            .c-flexbox--item#{$stt} {
+                & > picture > img {
+                    animation-name: fade;
+                    animation-duration: $time;
+                    animation-fill-mode: forwards;
+                    animation-delay: 2s;
+                }
+
+                &::after,
+                &::before {
+                    animation-name: fade;
+                    animation-duration: $time;
+                    animation-fill-mode: backwards;
+                    animation-delay: 2s;
+                }
+
+                .c-flexbox--infobox {
+                    animation-name: fade;
+                    animation-duration: $time;
+                    animation-fill-mode: forwards;
+                    animation-delay: 2s;
+          
+                }
+
+                .c-anm--img {
+                    animation-name: hide;
+                    animation-duration: $time;
+                    animation-fill-mode: forwards;
+                    animation-delay: 2s;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes goleft {
+    0% {
+        transform: translateX(60%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes goright {
+    0% {
+        transform: translateX(-60%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+

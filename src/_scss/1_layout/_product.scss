@@ -1,0 +1,268 @@
+.c-product {
+    font-feature-settings: "palt";
+
+    .c-product--exbox {
+        position: relative;
+        margin-top: 100px;
+        color: $cl-white-main;
+        background-image: url(/assets/img/product/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 86px 30px 84px;
+        @include sp {
+            background-image: url(/assets/img/product/bannerSP.jpg);
+            padding: 0;
+            margin-top: 30px;
+        
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 90%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $cl-red2;
+            @include sp {
+                height: 94%;
+                left: 49.9%;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 7px;
+            height: 7px;
+            top: 90%;
+            left: 50%;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            background-color: $cl-red2;
+            opacity: 0;
+            @include sp {
+                top: 93.8%;
+                width: 5px;
+                height: 5px;
+                left: 49.9%;
+            }
+        }
+    }
+
+    .c-product--main {
+        display: flex;
+        @include sp {
+            flex-wrap: wrap;
+            padding: 20px 19px 40px;
+            max-width: 375px;
+            overflow-x: auto;
+        }
+
+        & > * {
+            width: 50%;
+            @include sp {
+                width: 100%;
+            }
+        }
+    }
+
+    .c-product--l {
+        @include tab {
+            margin-bottom: 18px;
+        }
+
+        img {
+            max-width: 56%;
+            position: absolute;
+            top: 52.2%;
+            left: 29.95%;
+            transform: translate(-50%, -50%);
+            animation-name: flyaround;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+            @include tab {
+            }
+            @include sp {
+                animation-name: flyaroundSP;
+
+                max-width: 100%;
+                position: unset;
+              
+                transform: translate(0%);
+            }
+        }
+    }
+
+    .c-product--r {
+        padding: 7px 0 7px 50px;
+        @include sp {
+            padding: 0;
+        }
+    }
+
+    .c-product__title {
+        font-size: 2.4rem;
+        padding-left: 1px;
+        transform: translateX(-2px);
+        letter-spacing: 2.5px;
+        margin-bottom: 20px;
+        @include sp {
+            transform: translateX(0);
+            font-size: 1.6rem;
+            letter-spacing: 1.6px;
+            margin-bottom: 21px;
+        }
+    }
+
+    .c-product__cap {
+        font-weight: 300;
+
+        font-size: 1.4rem;
+        line-height: 2;
+        padding-right: 4px;
+        margin-bottom: 18px;
+        letter-spacing: 1.4px;
+        @include sp {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            letter-spacing: 1.2px;
+            margin-bottom: 11px;
+            padding-right: 0;
+        }
+    }
+
+    .c-product__desc {
+        font-size: 1.2rem;
+        line-height: 2.33;
+        font-weight: 300;
+
+        letter-spacing: 1.2px;
+        @include sp {
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+    }
+}
+
+.c-product--exbox.is-active {
+    &::before {
+        animation-name: godown;
+        animation-duration: 2s;
+    }
+
+    &::after {
+        animation-name: scalein;
+        @include sp {
+            animation-name: scaleinSP;
+        }
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes godown {
+    0% {
+        height: 0%;
+    }
+
+    100% {
+        height: 90%;
+    }
+}
+@keyframes scalein {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        width: 7px;
+        height: 7px;
+        opacity: 1;
+    }
+}
+@keyframes scaleinSP {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        width: 5px;
+        height: 5px;
+        opacity: 1;
+    }
+}
+
+@keyframes flyaround {
+    12% {
+        transform: translate(-55%, -60%);
+    }
+
+    25% {
+        transform: translate(-50%, -50%);
+    }
+
+    37% {
+        transform: translate(-45%, -60%);
+    }
+
+    50% {
+        transform: translate(-40%, -50%);
+    }
+
+    62% {
+        transform: translate(-35%, -60%);
+    }
+
+    75% {
+        transform: translate(-40%, -50%);
+    }
+
+    87% {
+        transform: translate(-45%, -60%);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes flyaroundSP {
+    12% {
+        transform: translate(-5%, -10%);
+    }
+
+    25% {
+        transform: translate(0%, 0%);
+    }
+
+    37% {
+        transform: translate(5%, -10%);
+    }
+
+    50% {
+        transform: translate(10%, 0%);
+    }
+
+    62% {
+        transform: translate(15%, -10%);
+    }
+
+    75% {
+        transform: translate(10%, 0%);
+    }
+
+    87% {
+        transform: translate(5%, -10%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}

@@ -1,0 +1,412 @@
+.c-mainvisual {
+  
+    color: $cl-white-main;
+    padding-top: 79px;
+    position: relative;
+    @include tab {
+        padding-top: 45px;
+    
+    }
+
+    .c-mainvisual--midexbox {
+        position: relative;
+    }
+
+    .c-hastag {
+        position: absolute;
+        top: 35.4%;
+        text-shadow: 0 0 5px rgba(136, 136, 136, 0.75);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include tab {
+            top: 36.7%;
+            text-shadow: 0 0 2px rgba(136, 136, 136, 0.75);
+        }
+    }
+
+    .c-hastagtxt {
+        font-family: $font-lora;
+        font-size: 9rem;
+        font-weight: 400;
+        color: $cl-white-main;
+        line-height: 0.88888;
+        letter-spacing: 9px;
+        width: 100%;
+    
+        @include tab {
+            font-size: 4.5rem;
+            letter-spacing: 4.5px;
+    
+        }
+
+        .c-hastagtxtsmall {
+            font-size: 2.8rem;
+            letter-spacing: 2.8px;
+            padding-left: 5px;
+            @include tab {
+                font-size: 1.4rem;
+                letter-spacing: 1.4px;
+                padding-left: 2px;
+            }
+        }
+    }
+
+    .c-hastagtxt2 {
+        font-feature-settings: "palt";
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 1.8rem;
+        letter-spacing: 2.3px;
+
+        font-weight: 300;
+       
+        padding-left: 15px;
+        @include tab {
+            font-size: 0.9rem;
+            letter-spacing: 0.95px;
+            white-space: nowrap;
+            margin-top: 0;
+            padding-left: 0;
+            transform: translate(5px, -2.3px);
+        }
+    }
+
+    .c-mainvisual--item {
+        position: relative;
+     
+    }
+
+    .c-mainvisual--item > picture > img {
+        min-width: 100%;
+        height: calc(100vh - 79px);
+      
+        min-height: 520px;
+        object-fit: cover;
+        @include tab {
+            height: calc(100vh - 45px);
+         
+          
+        
+        }
+       
+    }
+   
+    //----
+    .c-mainvisual--midcontent {
+        position: absolute;
+        max-width: 630px;
+        top: 50.1%;
+        left: 50.16%;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 0 5px rgba(136, 136, 136, 0.75);
+        @include tab {
+            top: 37.1%;
+            text-shadow: 0 0 2px rgba(136, 136, 136, 0.75);
+        }
+
+        .c-mainvisual--title {
+            font-size: 8rem;
+            font-weight: 400;
+            font-family: $font-lora;
+            line-height: 0.6;
+            letter-spacing: 10px;
+            text-align: center;
+            @include tab {
+                font-size: 5rem;
+
+                letter-spacing: 5px;
+            }
+        }
+
+        .c-mainvisual--desc {
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: 300;
+            font-family: $main-fonts;
+            letter-spacing: 1.6px;
+            transform: translate(-4px, 1px);
+            @include tab {
+                font-size: 1.5rem;
+                line-height: 0.8;
+                letter-spacing: 1.2px;
+                transform: translate(-2px, 1px);
+            }
+        }
+    }
+
+    .c-mainvisual--item1 {
+        .c-mainvisual--midcontent {
+            width: 630px;
+            min-width: 630px;
+            top: 29.8%;
+            left: 49.95%;
+            transform: translate(-50%, -25%);
+            @include tab {
+                max-width: 315px;
+                min-width: unset;
+                width: 315px;
+                
+                top: 27.6%;
+            }
+        }
+    }
+
+    .c-mainvisual--rounded {
+        position: absolute;
+        top: 77.8%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid rgb(255, 255, 255);
+        width: 34px;
+        height: 58px;
+        border-radius: 50px;
+        text-align: center;
+        padding: 5px 0;
+        @include tab {
+            border-radius: 8px;
+            height: 24px;
+            width: 18px;
+            border-width: 1px;
+            top: 69.8%;
+            left: 49.95%;
+        }
+    }
+
+    .c-mainvisual--point {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $cl-white-main;
+        animation-name: movedown;
+        animation-duration: 3.5s;
+        animation-iteration-count: infinite;
+        @include tab {
+            width: 5px;
+            height: 5px;
+            animation-name: moveup;
+        }
+    }
+
+    .c-mainvisual--notifi {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 92.7%;
+        left: 50%;
+        width: 970px;
+        transform: translate(-50%, -50%);
+        padding: 14px 9px 12px;
+        @include tab {
+            width: 100%;
+            top: unset;
+            bottom: 0%;
+            left: 0;
+            transform: translate(0);
+            
+            padding: 16px 20px 11px;
+           
+        }
+    }
+
+    .c-mainvisual--notifiexbox {
+      
+        display: flex;
+
+        @include tab {
+        }
+    }
+
+    .c-mainvisual--notifiL {
+        margin-right: 24px;
+        transform: translate(5px, -1px);
+        @include tab {
+            max-width: calc(35% - 14px);
+            margin-right: 14px;
+            transform: translate(0, 0);
+            white-space: nowrap;
+        }
+    }
+
+    .c-mainvisual--arrow {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-color: $cl-blue;
+        font-size: 1.6rem;
+        line-height: 20px;
+        text-align: center;
+        cursor: pointer;
+        font-weight: 300;
+        @include tab {
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .c-mainvisual--arrowL {
+        transform: rotate(180deg);
+
+        span {
+            display: inline-block;
+            transform: translateY(-1px);
+        }
+    }
+
+    .c-mainvisual--arrowR {
+        span {
+            display: inline-block;
+            transform: translateY(-2px);
+            @include tab {
+                transform: translateY(-1.5px);
+            }
+        }
+    }
+
+    .c-mainvisual--notifiMid {
+        font-weight: 300;
+       
+        font-size: 1.5rem;
+        letter-spacing: 0.7px;
+        transform: translate(-4px, 1px);
+        margin-right: 53px;
+        max-width: 73.9%;
+
+        .c-mainvisual--notifiMidtxt {
+            letter-spacing: 0.4px;
+            @include tab {
+                letter-spacing: 1px;
+            }
+        }
+
+        span {
+            letter-spacing: 1.25px;
+            margin-right: 20px;
+            @include tab {
+                letter-spacing: 1px;
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+        }
+        @include tab {
+            max-width: 79%;
+            margin-right: unset;
+            white-space: normal;
+            font-size: 1.2rem;
+            letter-spacing: 1.2px;
+            transform: translate(1px, -5px);
+            line-height: 1.77;
+            padding-right: 10px;
+        }
+    }
+
+    .c-mainvisual--notifiR {
+        padding-left: 21px;
+        font-weight: 300;
+        
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
+        border-left: 1px solid rgba(238, 238, 238, 0.4);
+
+        .c-mainvisual--notifiRtxt {
+            display: inline-block;
+            transform: translate(1px, 2px);
+
+            span {
+
+                display: inline-block;
+              
+                font-weight: 600;
+                margin-left: 2px;
+                transform: translateY(-2px);
+            }
+        }
+    }
+    @include tab {
+        .c-mainvisual--viewmore {
+            border-top: 1px solid rgb(204, 204, 204);
+            margin-top: 4px;
+            padding: 10.5px 0 24px;
+        }
+
+        .c-mainvisual--viewmoretxt {
+            float: right;
+            font-size: 1.3rem;
+            font-weight: 300;
+         
+            letter-spacing: 0.8px;
+            transform: translate(0, -2px);
+
+            span {
+                display: inline-block;
+                font-family: $main-fonts;
+                font-weight: 600;
+                font-size: 1.6rem;
+                transform: translate(2px, -1px);
+            }
+        }
+    }
+
+    //animation
+    .c-mainvisual--midexbox > picture > img {
+        animation-name: flip;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes flip {
+    0% {
+        transform: scale(10%) rotateY(180deg);
+    }
+
+    20% {
+        transform: scale(20%) rotateY(0deg);
+    }
+
+    40% {
+        transform: scale(40%) rotateY(-180deg);
+    }
+
+    60% {
+        transform: scale(60%) rotateY(0deg);
+    }
+
+    80% {
+        transform: scale(80%) rotateY(180deg);
+    }
+
+    100% {
+        transform: scale(100%) rotateY(0deg);
+    }
+}
+@keyframes movedown {
+    0% {
+        transform: translateY(0);
+       
+    }
+
+    50% {
+        transform: translateY(20px);
+       
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes moveup {
+    0% {
+        transform: translateY(-2px);
+       
+    }
+
+    50% {
+        transform: translateY(-16px);
+       
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
